@@ -8,4 +8,6 @@ public class Constants
 {
     public static int SCREEN_WIDTH;
     public static int SCREEN_HEIGHT;
+    //Delay before displaying game over
+    public static int GAMEOVER_TIME = 2000;
 }
