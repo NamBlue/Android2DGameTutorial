@@ -39,7 +39,7 @@ public class ObstacleManager
     {
         int currY = -5 * Constants.SCREEN_HEIGHT/4;
 
-        while(obstacles.get(obstacles.size() - 1).getRectangle().bottom < 0)
+        while(currY < 0)
         {
             //If xStart was all the way on the right side of screen, the gap
             //will be off-screen and there will be no room for the player to navigate around in
@@ -61,7 +61,8 @@ public class ObstacleManager
         if (obstacles.get(obstacles.size() - 1).getRectangle().top >= Constants.SCREEN_HEIGHT)
         {
             int xStart = (int)(Math.random() * (Constants.SCREEN_WIDTH - playerGap));
-            obstacles.add(0, new Obstacle(obstacleHeight, color, xStart, obstacles.get(0).getRectangle().top + obstacleHeight + obstacleGap, playerGap));
+            obstacles.add(0, new Obstacle(obstacleHeight, color, xStart, obstacles.get(0).getRectangle().top - obstacleHeight - obstacleGap, playerGap));
+            obstacles.remove(obstacles.size() - 1);
         }
     }
 
