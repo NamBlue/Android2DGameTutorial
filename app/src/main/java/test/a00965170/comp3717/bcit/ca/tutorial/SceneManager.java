@@ -11,8 +11,6 @@ import java.util.ArrayList;
 
 public class SceneManager
 {
-
-    //Work Done Here 5:24
     private ArrayList<Scene> scenes = new ArrayList<>();
     public static int ACTIVE_SCENE;
 
